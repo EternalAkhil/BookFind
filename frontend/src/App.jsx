@@ -11,7 +11,7 @@ import { useEffect } from 'react'
 const App = () => {
   useEffect(()=>{
     const handleunload = ()=>{
-      localStorage.clear()
+      sessionStorage.removeItem('token')
     }
     window.addEventListener('unload',handleunload)
     return()=>{

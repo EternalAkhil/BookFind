@@ -24,7 +24,6 @@ const Login = () => {
         const res = await userlogin(userdetails)
         const data = await res.json()
         alert(data.message);
-        console.log(data)
         if (data.token) {
           localStorage.clear()
           localStorage.setItem("token", data.token)

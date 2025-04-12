@@ -3,7 +3,7 @@ const URL = "https://bookfind-backend.onrender.com"
 const addfav = async(favdetails)=>{
   const email = localStorage.getItem("user")
   const data = {email:email,...favdetails}
-  const result = await fetch(`${process.env.URL}/api/user/fav/addfav`,{
+  const result = await fetch(`${URL}/api/user/fav/addfav`,{
     method:'POST',
     headers:{
       

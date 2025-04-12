@@ -27,7 +27,7 @@ const Favorites = () => {
         const updatedFavs = favs.filter(item => item._id !== id);
         setFavs(updatedFavs);
         setDeleted(true)
-        setTimeout(() => { setDeleted(false) }, 3000)
+        setTimeout(() => { setDeleted(false) }, 2000)
         // Optionally, update the backend or local storage
     };
     return (
@@ -35,10 +35,10 @@ const Favorites = () => {
             <Navbar/>
             {deleted &&
                 <div className='rounded-lg shadow-lg  p-2 mt-8 mx-1/4 w-auto flex justify-center'>
-                    <h1 className='text-3xl text-center text-blue-400'>Item deleted succesfully!</h1>
+                    <h1 className='text-xl text-center text-yellow-300'>Item deleted succesfully!</h1>
 
                 </div>}
-            <h1 className='text-center text-4xl text-white font-bold'>Favourites</h1>
+            <h1 className='text-center text-4xl text-white font-bold mt-5'>Favourites</h1>
 
             <div className='grid md:grid-cols-3 lg:grid-cols-4 mt-8 gap-4 p-4'>
                 {favs.map((item, index) => {

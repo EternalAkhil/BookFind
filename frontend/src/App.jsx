@@ -6,8 +6,18 @@ import Signup from './pages/Signup'
 import Error from './pages/Error'
 import Favorites from './pages/Favorites'
 import Profile from './pages/Profile'
+import { useEffect } from 'react'
 
 const App = () => {
+  useEffect(()=>{
+    const handleunload = ()=>{
+      localStorage.clear()
+    }
+    window.addEventListener('unload',handleunload)
+    return()=>{
+      window.removeEventListener('unload',handleunload)
+    }
+  },[])
   return (
     <div>
       

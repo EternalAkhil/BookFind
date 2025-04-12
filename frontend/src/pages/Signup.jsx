@@ -48,7 +48,7 @@ const Signup = () => {
     <Navbar/>
       <div className='text-white bg-transparent'>
         <h1 className='text-4xl mt-20 text-center  flex items-center justify-center'><FaRegUserCircle className='mr-2' />Register</h1>
-        <form className='w-1/3 mx-auto'>
+        <form className='w-3/4 lg:w-1/3 mx-auto'>
           <div className='mb-2'>
             <label htmlFor="name" className='block'>Name</label>
             <input type="text" name="name" id="name" className='w-full rounded-md border-2 bg-transparent outline-none border-white p-2' onChange={handlechange} value={userdetails.name} />

@@ -47,7 +47,7 @@ const Login = () => {
       <div className='bg-transparent text-white'>
 
         <h1 className='text-center text-4xl mt-20'><FaSignInAlt className='inline-block' /> Login</h1>
-        <form className='w-1/3 mx-auto mt-10' autoComplete='off'>
+        <form className='w-3/4 lg:w-1/3 mx-auto mt-10' autoComplete='off'>
           <div className='mb-4'>
             <label htmlFor='email' className='block'>Email</label>
             <input type='email' 

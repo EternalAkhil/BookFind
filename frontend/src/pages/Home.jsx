@@ -47,10 +47,10 @@ const Home = () => {
     <div className='home p-4'>
       <div className="hero text-white w-full flex flex-col gap-16 mb-8">
         
-        <h1 className='text-center text-xl lg:text-4xl mt-8'>Welcome to BooksFinnd!<i>Find your favourite books in a click</i></h1>
+        <h1 className='text-center text-xl lg:text-4xl mt-8'>Welcome to BooksFind<i>Find your favourite books in a click</i></h1>
 
         <div className="mt-8 flex justify-center items-center ">
-          <input type="text" className="w-1/2 h-full p-3 border rounded-lg border-gray-100 border-solid bg-transparent outline-none hover:bg-opacity-100 text-lg" placeholder='search...' value={query} onChange={(e) => setQuery(e.target.value)} />
+          <input type="text" className="w-full lg:w-1/2 h-full p-3 border rounded-lg border-gray-100 border-solid bg-transparent outline-none hover:bg-opacity-100 text-lg" placeholder='search...' value={query} onChange={(e) => setQuery(e.target.value)} />
           <FaSearch className='size-12 ml-4 border p-2 hover:scale-105 hover:cursor-pointer hover:bg-white hover:fill-black rounded-lg' onClick={findbook} />
         </div>
       </div>

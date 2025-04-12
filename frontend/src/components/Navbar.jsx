@@ -107,7 +107,7 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {hamOpen && (
         <div className="lg:hidden bg-transparent backdrop-filter backdrop-blur-sm  text-white">
-          <ul className="flex flex-col space-y-4 p-4 text-center">
+          <ul className="flex flex-col space-y-4 p-4 text-center items-center">
             <li>
               <Link
                 to="/"
@@ -156,13 +156,12 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    to="/logout"
+                  <button
                     className="block px-4 py-2 hover:bg-white hover:text-black rounded-lg transition"
-                    onClick={toggleHam}
+                    onClick={logout}
                   >
                     Logout
-                  </Link>
+                  </button>
                 </li>
               </>
             )}

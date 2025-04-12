@@ -1,7 +1,9 @@
+import dotenv from 'dotenv'
+const URL = "https://localhost:1500"
 const addfav = async(favdetails)=>{
   const email = localStorage.getItem("user")
   const data = {email:email,...favdetails}
-  const result = await fetch("http://localhost:1500/api/user/fav/addfav",{
+  const result = await fetch(`${process.env.URL}/api/user/fav/addfav`,{
     method:'POST',
     headers:{
       
@@ -14,7 +16,7 @@ const addfav = async(favdetails)=>{
 // DISPLAY FAVOURITES 
 const displayfav = async()=>{
   const data = {email:localStorage.getItem("user")}
-  const result = await fetch("http://localhost:1500/api/user/fav/displayfav",{
+  const result = await fetch(`${URL}/api/user/fav/displayfav`,{
     method:'POST',
     headers:{
       
@@ -27,7 +29,7 @@ const displayfav = async()=>{
 // DELETE FAVOURITES
 
 const deleteFav = async(id)=>{
-  const result = await fetch(`http://localhost:1500/api/user/fav/deletefav/${id}`,{
+  const result = await fetch(`${URL}/api/user/fav/deletefav/${id}`,{
     method:'DELETE',
   })
   return result;

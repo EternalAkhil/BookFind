@@ -1,5 +1,6 @@
+const URL = "http://localhost:1500"
 export const userlogin= async (userdetails)=>{
-    const result = await fetch("http://localhost:1500/api/user/login",{
+    const result = await fetch(`${URL}/api/user/login`,{
         method:'POST',
         headers:{
           'Content-Type':'application/json'
@@ -10,7 +11,7 @@ export const userlogin= async (userdetails)=>{
 }
 // registration
 export const registration = async (userdetails)=>{
-    const result = await fetch("http://localhost:1500/api/user/register",{
+    const result = await fetch(`${URL}/api/user/register`,{
         method:'POST',
         headers:{
           'Content-Type':'application/json'

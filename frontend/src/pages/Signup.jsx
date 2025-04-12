@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar.jsx';
 
 const Signup = () => {
+ 
   const navigate = useNavigate()
   const [userdetails, setUserdetails] = useState({})
   const [alldetails, setAlldetails] = useState(true)
@@ -21,7 +22,7 @@ const Signup = () => {
   // submissin logic
   const handlesubmit = async (e) => {
     e.preventDefault()
-    console.log('hi')
+ 
     if (!userdetails.name || !userdetails.email || !userdetails.password) {
       setUserdetails({ ...userdetails })
       setError("Please enter all fields!");

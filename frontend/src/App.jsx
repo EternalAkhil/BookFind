@@ -20,7 +20,7 @@ const App = () => {
     }
   },[])
   return (
-    <div className='h-[100vh] w-full border'>
+    <div className='h-full w-full'>
       
       <Routes>
         <Route path="/" element={<Landing />} />

@@ -15,7 +15,7 @@ const Landing = () => {
   return (
     <>
     <Navbar/>
-    <div className='flex flex-col justify-center items-center mt-6 lg:h-full'>
+    <div className='flex flex-col justify-center items-center mt-6 lg:mt-10 lg:h-full'>
       <h1 className='lg:text-4xl text-xl text-white font-bold font-serif'>Welcome to BookFind......</h1>
       <br />
       <h1 className='lg:text-4xl text-xl text-white font-bold font-serif'>A place to browse your favourite books</h1>

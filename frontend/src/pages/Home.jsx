@@ -13,7 +13,7 @@ const Home = () => {
   const [query, setQuery] = useState()
   const [books, setBooks] = useState([])
   const navigate = useNavigate()
-  const token = localStorage.getItem("token")
+  const token = sessionStorage.getItem("token")
   useEffect(() => {
     if (!token) {
       navigate('/login')

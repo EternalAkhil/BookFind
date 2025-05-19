@@ -26,7 +26,7 @@ const Login = () => {
         alert(data.message);
         if (data.token) {
           localStorage.clear()
-          localStorage.setItem("token", data.token)
+          sessionStorage.setItem("token", data.token)
           localStorage.setItem("user", data.finduser.email)
           localStorage.setItem("username", data.finduser.name)
           navigate("/")

@@ -7,6 +7,7 @@ import Error from './pages/Error'
 import Favorites from './pages/Favorites'
 import Profile from './pages/Profile'
 import { useEffect } from 'react'
+import Landing from './pages/Landing'
 
 const App = () => {
   useEffect(()=>{
@@ -19,16 +20,17 @@ const App = () => {
     }
   },[])
   return (
-    <div>
+    <div className='h-[100vh] w-full border'>
       
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Landing />} />
+        <Route path='/home' element={<Home/>}/>
         <Route path = "/login" element = {<Login />}/>
         <Route path = "/register" element = {<Signup />}/>
         <Route path = "/profile" element = {<Profile />}/>
         <Route path = "/favourites" element = {<Favorites />}/>
-        
         <Route path = "*" element = {<Error />} />
+        
       </Routes>
     </div>
   )
